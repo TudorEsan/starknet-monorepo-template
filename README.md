@@ -12,8 +12,8 @@ Please feel free to contribute to this project by submitting a pull request. Let
 
 1. **Clone the repository:**
    ```bash
-   git clone https://your-repository-url-here.git
-   cd your-repository-directory
+   git clone https://github.com/TudorEsan/starknet-monorepo-template
+   cd starknet-monorepo-template
    ```
 2. **Install dependencies:**
 
