@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --selection-background: black;
+    --selection-text: white;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 99% --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --selection-background: white;
+    --selection-text: black;
+
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.blur-effect-container {
+  mask-image: linear-gradient(90deg, transparent, #000 10% 93%, transparent);
+  padding: 0 1rem;
+}
+
+.white-filter {
+  filter: brightness(0) saturate(100%) contrast(100%) invert(1) brightness(200%);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-container {
+  /* Container animation properties */
+}
+.animate-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+  /* Adjust delay for each letter */
+  animation-delay: calc(0.1s * 10);
+}
+
+.animate-image {
+  animation: fadeInRight 0.5s forwards;
+}
+
+.transactions-toast-class {
+  color: black;
+}
+
+#dapp-modal {
+  color: black;
+}
+.transactions-toast-list {
+  color: black;
+}
+
+.rdp-vhidden {
+  @apply hidden;
+}
+
+.custom_login_component {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.custom_login_component:hover {
+  background-color: rgba(80, 220, 239, 0.15) !important;
+}
+
+.widget__actor {
+  /* if mobile hide */
+}
+
+@media only screen and (max-width: 640px) {
+  #sentry-feedback {
+    display: none;
+  }
+}
+
+@layer base {
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+::selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text);
+}
+
+::-moz-selection {
+  background-color: var(--selection-background);
+  color: var(--selection-text);
+}
