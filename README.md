@@ -1,4 +1,4 @@
-# StarkNet Project Template
+# Starknet Project Template
 
 ## Overview
 
